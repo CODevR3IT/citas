@@ -1,0 +1,20 @@
+<div class="page">
+  <app-header></app-header>
+  <app-menu></app-menu>
+  <div class="page-wrapper">
+    <div class="page-header d-print-none">
+      <div class="container-xl">
+        <app-breadcrumbs></app-breadcrumbs>
+    </div>
+
+    <div class="page-body">
+      <div class="container-xl">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+
+    <footer class="footer footer-transparent d-print-none">
+      <app-footer></app-footer>
+    </footer>
+  </div>
+</div>

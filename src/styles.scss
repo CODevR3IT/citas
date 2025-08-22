@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+@use "@tabler/core/scss/tabler" as tabler with (
+  $primary: #2DA87F
+);
+@use "@tabler/icons-webfont/dist/tabler-icons" as tabler-icons;
+@use "angular-calendar/scss/angular-calendar" as angular-calendar;
+
+.table-responsive .dropdown,
+.table-responsive .btn-group,
+.table-responsive .btn-group-vertical {
+  position: static;
+}
