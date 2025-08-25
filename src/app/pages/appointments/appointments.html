@@ -1,0 +1,30 @@
+<div class="mb-5">
+    <div class="input-icon">
+        <input type="text" value="" class="form-control form-control-rounded" placeholder="Buscar...">
+        <span class="input-icon-addon">
+            <i class="ti ti-search"></i>
+        </span>
+    </div>
+</div>
+ @for (card of cards | slice: (page-1) * pageSize : page * pageSize; track card) {
+
+<div class="mb-5">
+    <div class="card">
+        <div class="card-status-start bg-primary"></div>
+        <div class="card-body">
+            <h3 class="card-title">{{ card.name }}</h3>
+            <p class="text-secondary">
+                {{ card.description }}
+            </p>
+        </div>
+        <!-- Card footer -->
+        <div class="card-footer">
+            <a href="#" class="btn btn-primary">Más información</a>
+        </div>
+    </div>
+</div>
+}
+
+<ngb-pagination [(page)]="page"
+                [pageSize]="pageSize"
+                [collectionSize]="cards.length" />
